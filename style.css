@@ -1,0 +1,356 @@
+/* ---------- Base ---------- */
+:root {
+  --verde: #2e7d32;
+  --fondo: #f5f5f5;
+  --texto: #111;
+  --borde: #111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 18px 26px;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Actor", "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  background: #d9d9d9; /* se ve mientras no cargue la imagen */
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 12px 10px;
+  background: var(--verde);
+  border: 1px solid var(--borde);
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.pie-enlaces {
+  font-weight: 400;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+}
+
+.menu a + a::before {
+  content: "|";
+  margin: 0 6px;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  margin-top: 20px;
+  background: var(--verde);
+  border: 1px solid var(--borde);
+  color: #fff;
+}
+
+.pie-titulo {
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.pie-enlaces {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 7px 10px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pie-enlaces a:hover,
+.pie-enlaces a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ---------- Tarjetas (compartidas) ---------- */
+.tarjeta {
+  border: 1px solid var(--borde);
+  background: #fff;
+}
+
+.tarjeta h3 {
+  color: var(--verde);
+  font-weight: 400;
+}
+
+/* =========================================================
+   PÁGINA DE INICIO
+   ========================================================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 300px;
+  background-color: #efefef;
+  background-image: url("imagenes/hero.png");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.hero-texto {
+  padding: 22px 10px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--verde);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin: 6px 0 14px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 7px 7px;
+  background: var(--verde);
+  border: 1px solid var(--borde);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.boton:hover,
+.boton:focus-visible {
+  background: #256528;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 770px;
+  height: 300px;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.porque {
+  max-width: 700px;
+  padding: 28px 0 0 2px;
+}
+
+.porque h2 {
+  color: var(--verde);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.porque p {
+  font-size: 1.1rem;
+  margin: 8px 0 0 4px;
+  line-height: 1.4;
+}
+
+.accesos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.tarjeta-acceso {
+  display: block;
+  width: calc((100% - 40px) / 3);
+  padding: 0 0 18px;
+}
+
+.tarjeta-acceso img {
+  height: 110px;
+  width: calc(100% - 32px);
+  margin: 16px 16px 12px;
+}
+
+.tarjeta-acceso h3 {
+  font-size: 1.4rem;
+  padding: 0 16px;
+}
+
+.tarjeta-acceso p {
+  font-size: 1.05rem;
+  padding: 0 16px;
+}
+
+.tarjeta-acceso:hover,
+.tarjeta-acceso:focus-visible {
+  outline: 2px solid var(--verde);
+}
+
+.creditos {
+  padding: 24px 10px 0;
+  scroll-margin-top: 20px;
+}
+
+.creditos h2 {
+  color: var(--verde);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.creditos ul {
+  margin-top: 6px;
+  padding-left: 22px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PÁGINA SEPARACIÓN DE RESIDUOS
+   ========================================================= */
+.intro {
+  padding: 24px 0 0;
+}
+
+.intro h1 {
+  color: var(--verde);
+  font-size: 2rem;
+  font-weight: 400;
+  padding-left: 2px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  padding-left: 2px;
+}
+
+.banner {
+  height: 160px;
+  margin: 8px 0 0 20px;
+  width: calc(100% - 40px);
+}
+
+.tipos {
+  padding-top: 24px;
+}
+
+.tipos h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-left: 2px;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-top: 14px;
+}
+
+.grilla .tarjeta {
+  padding: 12px 0 10px;
+}
+
+.grilla .tarjeta img {
+  height: 70px;
+  width: calc(100% - 24px);
+  margin: 0 12px 8px;
+}
+
+.grilla .tarjeta h3 {
+  font-size: 1.4rem;
+  padding: 0 14px;
+}
+
+.grilla .tarjeta p {
+  font-size: 1.05rem;
+  padding: 0 14px;
+}
+
+.consejos {
+  padding: 24px 10px 0;
+}
+
+.consejos h2 {
+  color: var(--verde);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.consejos ul {
+  padding-left: 22px;
+  margin-top: 6px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* ---------- Pantallas chicas ---------- */
+@media (max-width: 760px) {
+  body {
+    padding: 12px;
+  }
+
+  .hero-texto {
+    max-width: 100%;
+    padding-bottom: 130px;
+  }
+
+  .hero img {
+    height: 120px;
+  }
+
+  .porque {
+    max-width: 100%;
+  }
+
+  .accesos {
+    flex-direction: column;
+  }
+
+  .tarjeta-acceso {
+    width: 100%;
+  }
+
+  .grilla {
+    grid-template-columns: 1fr;
+  }
+
+  .banner {
+    margin-left: 0;
+    width: 100%;
+  }
+}
